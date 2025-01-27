@@ -1,0 +1,35 @@
+.apply-coupon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    background: url("/apply-bg.jpg") no-repeat center center/cover;
+    color: white;
+  }
+  
+  .apply-coupon h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .apply-coupon p {
+    font-size: 1.2rem;
+  }
+  
+  .apply-coupon button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .apply-coupon button:hover {
+    background: #388e3c;
+  }
+  
