@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./AddCoupon.css";
 import PropTypes from 'prop-types';
 
 function AddCoupon({ addCoupon }) {
-  const [couponCode, setCouponCode] = useState("");
-  const [discount, setDiscount] = useState("");
-  const [expiryDate, setExpiryDate] = useState("");
-  const [category, setCategory] = useState("");
+  const [couponCode, setCouponCode] = useState("SAVE20");
+  const [discount, setDiscount] = useState("20%");
+  const [expiryDate, setExpiryDate] = useState("2025-12-31");
+  const [category, setCategory] = useState("Food");
 
   const handleSubmit = (e) => {
     e.preventDefault();

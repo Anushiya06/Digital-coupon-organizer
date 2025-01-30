@@ -1,36 +1,59 @@
 .view-coupons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Full viewport height */
-    background: url("/view-bg.jpg") no-repeat center center/cover;
-    color: white;
-  }
-  
-  .view-coupons h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .view-coupons p {
-    font-size: 1.2rem;
-    margin-top: 20px;
-  }
-  
-  .view-coupons button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background: #ff5722;
-    color: white;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .view-coupons button:hover {
-    background: #e64a19;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("/view-bg.jpg") no-repeat center center/cover;
+  color: white;
+  text-align: center; 
+}
+
+.view-coupons h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.view-coupons p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.view-coupons .coupon-container {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  width: 100%;
+  text-align: left;
+}
+
+.view-coupons .coupon-container hr {
+  border: 0;
+  height: 1px;
+  background: #fff;
+  margin: 10px 0;
+}
+
+.view-coupons button {
+  margin-top: 15px;
+  padding: 12px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background: #ff5722;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.view-coupons button:hover {
+  background: #e64a19;
+  transform: scale(1.05);
+}
+
+.view-coupons button:active {
+  transform: scale(0.95);
+}

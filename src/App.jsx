@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import AddCoupon from "./components/AddCoupon";
 import ViewCoupons from "./components/ViewCoupons";
-import ApplyCoupon from "./components/ApplyCoupon";
 import Statistics from "./components/Statistics";
+import CouponExpiry from "./components/CouponExpiry"; 
 
 function App() {
   const [coupons, setCoupons] = useState([]);
-  const [page, setPage] = useState("add"); // Added this line
+  const [page, setPage] = useState("add");
 
   const addCoupon = (newCoupon) => {
     setCoupons((prev) => [...prev, newCoupon]);
@@ -20,14 +20,14 @@ function App() {
       <nav>
         <button onClick={() => setPage("add")}>Add Coupon</button>
         <button onClick={() => setPage("view")}>View Coupons</button>
-        <button onClick={() => setPage("apply")}>Apply Coupons</button>
         <button onClick={() => setPage("stats")}>Statistics</button>
+        <button onClick={() => setPage("expiry")}>Coupon Expiry</button> 
       </nav>
       <main>
         {page === "add" && <AddCoupon addCoupon={addCoupon} />}
         {page === "view" && <ViewCoupons coupons={coupons} />}
-        {page === "apply" && <ApplyCoupon coupons={coupons} />}
         {page === "stats" && <Statistics coupons={coupons} />}
+        {page === "expiry" && <CouponExpiry coupons={coupons} />} 
       </main>
     </div>
   );
